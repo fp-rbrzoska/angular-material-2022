@@ -3,4 +3,35 @@
   <a mat-tab-link > Link2 </a>
   <a mat-tab-link disabled>Disabled Link</a>
 </nav>
+<mat-table [dataSource]="dataSource" matSort ="sortData($event)" matSortActive="id" matSortDirection="desc">
+  <!-- User name Definition -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef  mat-sort-header="name" > Name </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Age Definition -->
+  <ng-container matColumnDef="num">
+    <mat-header-cell *matHeaderCellDef mat-sort-header="num">  Number </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.num}} </mat-cell>
+  </ng-container>
+
+  <!-- Title Definition -->
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef  start="desc" disableClear="true" mat-sort-header="id"> Id </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+  </ng-container>
+
+  <!-- Header and Row Declarations -->
+  <mat-header-row *matHeaderRowDef="['id', 'num', 'name']"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: ['id', 'num', 'name']"></mat-row>
+</mat-table>
+<table>
+  <tbody>
+    <tr *ngFor="let item of data" [ngClass]="{ active: item.isActive }">
+      <td *ngFor="let col of cols">{{ item[col] }}</td>
+    </tr>
+  </tbody>
+</table>
+
 <app-address-form></app-address-form>

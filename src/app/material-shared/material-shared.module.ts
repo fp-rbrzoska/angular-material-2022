@@ -12,6 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule,
+    MatSortModule
   ],
   exports: [
     LayoutModule,
@@ -45,7 +49,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule,
+    MatSortModule
   ]
 })
 export class MaterialSharedModule { }

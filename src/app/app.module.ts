@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialNavComponent } from './material-nav/material-nav.component';
 import { AddressFormComponent } from './address-form/address-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     MaterialSharedModule,
     BrowserAnimationsModule,
-
+    HttpClientModule,
     ReactiveFormsModule,
 
   ],
