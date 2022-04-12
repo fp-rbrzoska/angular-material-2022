@@ -11,9 +11,11 @@ import { TestExamplesComponent } from './test-examples/test-examples.component';
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
   { path: 'form', component: FormComponent},
-  { path: 'table', component: TableComponent},
-  { path: 'table/a', component: TableAComponent},
-  { path: 'table/b', component: TableBComponent},
+  { path: 'table', component: TableComponent, children: [
+    { path: 'a', component: TableAComponent},
+    { path: 'b', component: TableBComponent},
+  ]},
+
   { path: 'other', component: OtherComponent},
   { path: 'examples', component: TestExamplesComponent}
 ];

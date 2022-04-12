@@ -1,1 +1,7 @@
-<p>table works!</p>
+<nav mat-tab-nav-bar >
+  <a mat-tab-link routerLink="/table/a" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive"> Material Table </a>
+  <a mat-tab-link routerLink="/table/b" routerLinkActive #rla1="routerLinkActive" [active]="rla1.isActive"> Virtual scroll </a>
+</nav>
+<mat-card class="m-2 p-2">
+  <router-outlet></router-outlet>
+</mat-card>
