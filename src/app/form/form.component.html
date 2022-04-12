@@ -1,1 +1,19 @@
-<p>form works!</p>
+<mat-card class="m-3 p-2">
+  <form [formGroup]="myForm" (submit)="submitForm()">
+    <div class="d-flex flex-column flex-md-row">
+      <mat-form-field>
+        <mat-label>User Name</mat-label>
+        <input matInput placeholder="User name" formControlName="userName">
+        <mat-error>User name is required!</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+        <mat-error>Email is required!</mat-error>
+      </mat-form-field>
+    </div>
+
+  <button mat-raised-button color="primary">Submit</button>
+</form>
+</mat-card>

@@ -14,6 +14,8 @@ import { MaterialSharedModule } from './material-shared/material-shared.module';
 import { TestExamplesComponent } from './test-examples/test-examples.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialNavComponent } from './material-nav/material-nav.component';
+import { AddressFormComponent } from './address-form/address-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,16 @@ import { MaterialNavComponent } from './material-nav/material-nav.component';
     NavigationComponent,
     OtherComponent,
     TestExamplesComponent,
-    MaterialNavComponent
+    MaterialNavComponent,
+    AddressFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialSharedModule,
     BrowserAnimationsModule,
+
+    ReactiveFormsModule,
 
   ],
   providers: [],

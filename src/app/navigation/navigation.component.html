@@ -1,13 +1,26 @@
-<nav>
+<mat-toolbar color="primary" class="d-flex align-items-center justify-content-between">
+  <!-- <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button>
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button> -->
   <div>
-  <a routerLink="/">Home</a>
-  <a routerLink="/form">Form</a>
-  <a routerLink="/table">Table</a>
-  <a routerLink="/other">Other</a>
-  <a routerLink="/examples">Examples</a>
+    <span>fp-mat</span>
+    <a mat-button routerLink="/">Home</a>
+    <a mat-button routerLink="/form">Form</a>
+    <a mat-button routerLink="/table">Table</a>
+    <a mat-button routerLink="/other">Other</a>
+    <a mat-button routerLink="/examples">Examples</a>
   </div>
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
 
-  <div>
-    <button>Login</button>
-  </div>
-</nav>
+<mat-menu #profileMenu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
