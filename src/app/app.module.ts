@@ -18,6 +18,8 @@ import { AddressFormComponent } from './address-form/address-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { IconMapperPipe } from './icon-mapper.pipe';
+import { TableVirtualScrollModule } from 'ng-table-virtual-scroll';
+import { TableCComponent } from './table-c/table-c.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { IconMapperPipe } from './icon-mapper.pipe';
     TestExamplesComponent,
     MaterialNavComponent,
     AddressFormComponent,
-    IconMapperPipe
+    IconMapperPipe,
+    TableCComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { IconMapperPipe } from './icon-mapper.pipe';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    TableVirtualScrollModule
 
   ],
   providers: [],

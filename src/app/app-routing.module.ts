@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { OtherComponent } from './other/other.component';
 import { TableAComponent } from './table-a/table-a.component';
 import { TableBComponent } from './table-b/table-b.component';
+import { TableCComponent } from './table-c/table-c.component';
 import { TableComponent } from './table/table.component';
 import { TestExamplesComponent } from './test-examples/test-examples.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'table', component: TableComponent, children: [
     { path: 'a', component: TableAComponent},
     { path: 'b', component: TableBComponent},
+    { path: 'c', component: TableCComponent},
   ]},
 
   { path: 'other', component: OtherComponent},

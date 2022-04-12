@@ -1,1 +1,16 @@
-<p>table-b works!</p>
+<cdk-virtual-scroll-viewport itemSize="50" class="data-viewport">
+  <table>
+    <thead><tr>
+      <th>Name</th>
+      <th>Company</th>
+    </tr></thead>
+    <tbody>
+  <tr *cdkVirtualFor="let item of data$ | async" class="data-item">
+    <td>{{item.name}}</td>
+    <td>{{item.company}}</td>
+  </tr>
+  </tbody>
+  </table>
+
+
+</cdk-virtual-scroll-viewport>
