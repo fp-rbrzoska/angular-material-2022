@@ -17,6 +17,7 @@ import { MaterialNavComponent } from './material-nav/material-nav.component';
 import { AddressFormComponent } from './address-form/address-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { IconMapperPipe } from './icon-mapper.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     OtherComponent,
     TestExamplesComponent,
     MaterialNavComponent,
-    AddressFormComponent
+    AddressFormComponent,
+    IconMapperPipe
   ],
   imports: [
     BrowserModule,
